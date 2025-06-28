@@ -19,7 +19,7 @@ export class AuthenticationService {
 
   // can either return a response or an error
   public login(user: User): Observable<HttpResponse<any> | HttpErrorResponse> {
-    return this.http.post<HttpResponse<any> | HttpErrorResponse>(`${this.host}/user/login`, user, {observe: 'response'});  // we want the whole HTTP response back
+    return this.http.post<HttpResponse<any> | HttpErrorResponse>(`${this.host}/user/login`, user, {observe: 'response'});  // we want the whole HTTP response backsrc/app/service/authentication.service.ts
   }
 
   public register(user: User): Observable<User | HttpErrorResponse> {
